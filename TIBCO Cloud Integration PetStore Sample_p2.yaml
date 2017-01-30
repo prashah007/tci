@@ -1,5 +1,4 @@
---- |
-  consumes:
+consumes:
   - application/json
   definitions:
     Pet:
