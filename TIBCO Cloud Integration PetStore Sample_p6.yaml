@@ -1,5 +1,5 @@
 consumes:
-- text/plain
+- application/json
 definitions:
   Pet:
     properties:
@@ -73,7 +73,7 @@ paths:
   /pet/{petId}:
     delete:
       consumes:
-      - text/plain
+      - application/json
       description: The DELETE method in an API Specification is used to remove a resource
         from the API. In this case it would remove the pet with the petId you specify
         when calling the API. When you create a [Mock application](https://integration.cloud.tibco.com/docs/mockapp/creatingMockApp/index.html#APIModeler)
@@ -86,7 +86,7 @@ paths:
         required: true
         type: string
       produces:
-      - text/plain
+      - application/json
       responses:
         "200":
           description: a string to be returned
@@ -96,7 +96,7 @@ paths:
         a pet from the store
     get:
       consumes:
-      - text/plain
+      - application/json
       description: The GET method in an API Specification is used to retrieve a resource
         from the API. In this case it would retrieve a pet with the petId you specify
         when calling the API. When the pet is found it will return the information
@@ -110,12 +110,12 @@ paths:
         required: true
         type: string
       produces:
-      - text/plain
+      - application/json
       responses:
         "200":
           description: a Pet to be returned
           examples:
-            text/plain:
+            application/json:
               category:
                 id: "1"
                 name: Domesticated pets
@@ -134,7 +134,7 @@ paths:
         from the store
     post:
       consumes:
-      - text/plain
+      - application/json
       description: The POST method in an API Specification is used to create a new
         resource. In this case it would create a new pet with the petId you specify
         when calling the API and the information you add to the body (e.g. the name
@@ -155,12 +155,12 @@ paths:
         required: true
         type: string
       produces:
-      - text/plain
+      - application/json
       responses:
         "200":
           description: a Pet to be returned
           examples:
-            text/plain:
+            application/json:
               category:
                 id: "1"
                 name: Domesticated pets
@@ -178,7 +178,7 @@ paths:
       summary: Use the POST method of this API specification to create a new pet
     put:
       consumes:
-      - text/plain
+      - application/json
       description: The PUT method in an API Specification is used to create a new
         resource or update an existing resource. Based on the ID you specify when
         calling the API it would create a new pet in the store if the ID isn't in
@@ -201,12 +201,12 @@ paths:
         required: true
         type: string
       produces:
-      - text/plain
+      - application/json
       responses:
         "200":
           description: a Pet to be returned
           examples:
-            text/plain:
+            application/json:
               category:
                 id: "1"
                 name: Domesticated pets
@@ -223,7 +223,7 @@ paths:
             $ref: '#/definitions/Pet'
       summary: Use the PUT method of this API specification to update a pet
 produces:
-- text/plain
+- application/json
 schemes:
 - http
 swagger: "2.0"
